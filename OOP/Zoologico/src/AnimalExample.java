@@ -1,3 +1,4 @@
+// Depends on the Animal classes
 public class AnimalExample
 {
     public static void main(String[] args)

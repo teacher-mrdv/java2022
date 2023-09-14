@@ -1,6 +1,6 @@
 public class Fish extends Animal {
 
-    private boolean seaWater;
+    private boolean seaWater; // waterType
 
     public Fish(String name, int birthYear, boolean seaWater) {
         super(name, birthYear);
