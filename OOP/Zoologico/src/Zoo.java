@@ -56,11 +56,20 @@ public class Zoo
 
     @Override
     public String toString() {
-        return "Zoo{" +
-                "name='" + name + '\'' +
+        String output =
+                "Zoo name: " + this.name + "\nAddress: " + this.address +
+                "Animals:\n";
+        for(Animal a : animals) {
+            if(a!=null)
+                output = output + "\t" + a.toString() + "\n";
+        }
+        return output;
+
+/*        return "Zoo name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", animals=" + Arrays.toString(animals) +   // Depdendency on
                 '}';                                        // Arrays class
+ */
     }
 
 }

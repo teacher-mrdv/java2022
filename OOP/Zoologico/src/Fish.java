@@ -1,6 +1,6 @@
 public class Fish extends Animal {
 
-    private boolean seaWater; // waterType
+    private boolean seaWater; // waterType: true = seawater; false=fresh water
 
     public Fish(String name, int birthYear, boolean seaWater) {
         super(name, birthYear);
@@ -17,11 +17,11 @@ public class Fish extends Animal {
         return seaWater;
     }
 
-    public char getSeaWater() {
+    public String getSeaWater() {
         if( seaWater ) {
-            return 'Y';
+            return "Sea water";
         } else {
-            return 'N';
+            return "Fresh water";
         }
     }
 
@@ -47,6 +47,6 @@ public class Fish extends Animal {
 
     @Override
     public String toString() {
-        return super.toString() + " | Salt water fish? " + getSeaWater();
+        return super.toString() + " | " + getSeaWater();
     }
 }
