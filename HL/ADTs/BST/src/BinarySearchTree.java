@@ -64,6 +64,7 @@ public class BinarySearchTree {
     public boolean search(String data) {
         return search(root, data);
     }
+
     public boolean search(Node node, String data) {
         if (node == null) // base case 1 - not found
             return false;
@@ -75,5 +76,49 @@ public class BinarySearchTree {
             return search(node.left, data);
     }
 
+    public void preOrder() {
+        if( this.isEmpty() )
+            System.out.println(">>> The tree is empty <<<");
+        else
+            preOrder(root);
+    }
+
+    public void preOrder(Node node) {
+        if(node == null) {
+            //System.out.println("<null>");
+            return;
+        }
+        
+    }
+
+    public void inOrder() {
+        if( this.isEmpty() )
+            System.out.println(">>> The tree is empty <<<");
+        else
+            inOrder(root);
+    }
+
+    public void inOrder(Node node) {
+        if(node == null) {
+            //System.out.println("<null>");
+            return;
+        }
+
+    }
+
+    public void postOrder() {
+        if( this.isEmpty() )
+            System.out.println(">>> The tree is empty <<<");
+        else
+            postOrder(root);
+    }
+
+    public void postOrder(Node node) {
+        if(node == null) {
+            //System.out.println("<null>");
+            return;
+        }
+
+    }
 
 }
