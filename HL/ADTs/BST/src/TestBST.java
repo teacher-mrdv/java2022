@@ -13,7 +13,7 @@ public class TestBST
         myBST01.insert("Eshan");
         myBST01.insert("Maithli");
         myBST01.insert("Pahal");
-        System.out.println("Searching BST for : "+ myBST01.search("Pahal"));
+        System.out.println("Searching BST for Pahal: "+ myBST01.search("Pahal"));
         System.out.println("Searching BST for Alan: "+ myBST01.search("Alan"));
         System.out.println("\nTRAVERSALS\nPreOrder: ");
         myBST01.preOrder();
