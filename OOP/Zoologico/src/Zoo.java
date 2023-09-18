@@ -6,12 +6,14 @@ public class Zoo
     private String name;
     private String address;
     public Animal[] animals; // aggregation
+    public int population;
 
     public Zoo(String name, String address)
     {
        this.name = name;
        this.address = address;
        this.animals = new Animal[MAXCAPACITY];
+       this.population = 0;
     }
 
     public String getName() {
@@ -35,30 +37,33 @@ public class Zoo
     }
 
     public Animal getAnimal(int index) {
-        if( animals[index] == null || index < 0 || index > MAXCAPACITY) {
+        if( index < 0 || index > MAXCAPACITY || animals[index] == null ) {
             System.out.println("Error");
             return null;
         }
         return animals[index];
     }
 
+    /* Not really useful to us...
     public void setAnimals(Animal[] animals) {
         this.animals = animals;
     }
+    */
 
-    public void setAnimal(Animal animal, int index) {
-        if( index < 0 || index > MAXCAPACITY) {
-            System.out.println("Error");
+    public void setAnimal(Animal animal) {
+        if( this.population > MAXCAPACITY) {
+            System.out.println("Over capacity");
             return;
         }
-        animals[index] = animal;
+        animals[population] = animal;
+        population++;
     }
 
     @Override
     public String toString() {
         String output =
                 "Zoo name: " + this.name + "\nAddress: " + this.address +
-                "Animals:\n";
+                "\nPopulation: " + this.population + "\nAnimals:\n";
         for(Animal a : animals) {
             if(a!=null)
                 output = output + "\t" + a.toString() + "\n";
