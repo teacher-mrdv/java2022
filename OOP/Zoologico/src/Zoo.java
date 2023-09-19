@@ -5,8 +5,8 @@ public class Zoo
     private static final int MAXCAPACITY = 1000;
     private String name;
     private String address;
-    public Animal[] animals; // aggregation
-    public int population;
+    private Animal[] animals; // aggregation
+    private int population;
 
     public Zoo(String name, String address)
     {
@@ -37,7 +37,7 @@ public class Zoo
     }
 
     public Animal getAnimal(int index) {
-        if( index < 0 || index > MAXCAPACITY || animals[index] == null ) {
+        if( index < 0 || index >= MAXCAPACITY || animals[index] == null ) {
             System.out.println("Error");
             return null;
         }
@@ -51,7 +51,7 @@ public class Zoo
     */
 
     public void setAnimal(Animal animal) {
-        if( this.population > MAXCAPACITY) {
+        if( this.population >= MAXCAPACITY) {
             System.out.println("Over capacity");
             return;
         }
