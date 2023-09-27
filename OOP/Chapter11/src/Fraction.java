@@ -10,6 +10,9 @@ public class Fraction {
         this.numerator = numerator;
     }
 
+    public Fraction add(Fraction b) {
+
+    }
 
     // toString = polymorphism/overriding the Object class' toString method
     public String toString() {

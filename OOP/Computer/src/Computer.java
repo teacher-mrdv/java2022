@@ -41,7 +41,7 @@ public class Computer
 		this.secondaryMemory = secondaryMemory;
 	}
 
-	public double getVirtualMemory() {
+	public double calculateVirtualMemory() {
 		return this.primaryMemory * 1.5;
 	}
 
