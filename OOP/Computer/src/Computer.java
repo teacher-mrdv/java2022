@@ -1,4 +1,8 @@
-public class Computer
+/*
+	Note: nevermind the abstract, it's something to help remind you to write the calculateVirtualMemory method in...
+	...ALL your subclasses
+*/
+public abstract class Computer
 {
 
 	private String name;
@@ -41,9 +45,7 @@ public class Computer
 		this.secondaryMemory = secondaryMemory;
 	}
 
-	public double calculateVirtualMemory() {
-		return this.primaryMemory * 1.5;
-	}
+	public abstract double calculateVirtualMemory(); // this is fine
 
 	public String toString()
 	{

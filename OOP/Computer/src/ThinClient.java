@@ -15,7 +15,7 @@ public class ThinClient extends Computer {
     }
 
     @Override
-    public double getVirtualMemory() {
+    public double calculateVirtualMemory() {
         return 0;
     }
 

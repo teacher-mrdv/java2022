@@ -16,7 +16,7 @@ public class Server extends Computer {
 	}
 
 	// just for example purposes
-	public double getVirtualMemory() {
+	public double calculateVirtualMemory() {
 		return (this.getPrimaryMemory() * 3) + (this.clients * 0.5);
 	}
 
