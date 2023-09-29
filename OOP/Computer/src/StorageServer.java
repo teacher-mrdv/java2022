@@ -7,6 +7,9 @@ public class StorageServer extends Server {
             this.redundancy = redundancy;
     }
 
+    // StorageServer communityServer = new StorageServer("OFScs", 32, 16384,
+    //				    400, 3);
+
     public int getRedundancy() {
         return redundancy;
     }

@@ -68,5 +68,12 @@ public class ComputerTest {
 		System.out.println(chromeBook.getProtocol());
 		System.out.println( "VM allocation = " +
 				chromeBook.calculateVirtualMemory() + " GB" );
+
+		System.out.println();
+		StorageServer communityServer = new StorageServer("OFScs", 32, 16384,
+				400, 3);
+		System.out.println(communityServer);
+		communityServer.setCPU("Xeon Max 9460");
+		System.out.println( communityServer.getCPU() );
 	}
 }
