@@ -17,8 +17,8 @@ public class ComputerTest {
 		 	any other necessary changes as required :)
 		*************************************************************************************************/
 
-		/* uncomment the code below to test your Laptop and Desktop classes...
-		Laptop thinkpad = new Laptop("T14s", 8, 512, 48);
+		/* uncomment the code below to test your Laptop and Desktop classes... */
+		Laptop thinkpad = new Laptop("T14s", "i5", 8, 512, 48);
 		System.out.println(thinkpad);
 		System.out.println("Upgrading");
 		thinkpad.setName("Lenovo T14s");
@@ -32,7 +32,7 @@ public class ComputerTest {
 		System.out.println("Recommended VM allocation: " + thinkpad.calculateVirtualMemory() + " GB");
 		System.out.println();
 
-		Desktop myPC = new Desktop("Gaming PC", 16, 2048, "Radeon 5500XT");
+		Desktop myPC = new Desktop("Gaming PC", "R5/1500", 16, 2048, "Radeon 5500XT");
 		System.out.println(myPC);
 		myPC.setCPU("AMD Ryzen 5 2600");
 		System.out.println(myPC.getCPU());
@@ -44,12 +44,14 @@ public class ComputerTest {
 		System.out.println("Discrete GPU: " + myPC.getGPU());
 		System.out.println("Recommended VM allocation = " + myPC.calculateVirtualMemory() + " GB");
 		System.out.println();
-		*/
 
 		System.out.println();
 		Server opteron = new Server("Opteron01", 64,4096, 25);
+		opteron.setCPU("2384");
 		System.out.println(opteron);
 		System.out.println("Upgrading");
+		opteron.setCPU("8350");
+		System.out.println("Upgraded CPU: " + opteron.getCPU());
 		System.out.println( "Recommended VM allocation = " +
 				opteron.calculateVirtualMemory() + " GB for " +
 				opteron.getClients() + " clients" );
@@ -59,7 +61,8 @@ public class ComputerTest {
 				opteron.getClients() + " clients" );
 
 		System.out.println();
-		ThinClient chromeBook = new ThinClient("HP Stream", 4,32, "TCP/IP");
+		ThinClient chromeBook = new ThinClient("HP Stream",4,32, "TCP/IP");
+		chromeBook.setCPU("N4020");
 		System.out.println(chromeBook);
 		System.out.println("Upgrading");
 		chromeBook.setProtocol("TCP/IP v4, v6");
