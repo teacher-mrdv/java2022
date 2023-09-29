@@ -2,7 +2,8 @@ public class Server extends Computer {
 
 	private int clients;
 
-	public Server(String name, int primaryMemory, int secondaryMemory, int clients) {
+	public Server(String name, int primaryMemory, int secondaryMemory,
+				  int clients) {
 		super(name, primaryMemory, secondaryMemory);
 		this.clients = clients;
 	}

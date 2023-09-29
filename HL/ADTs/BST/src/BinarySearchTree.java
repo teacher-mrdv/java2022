@@ -88,7 +88,9 @@ public class BinarySearchTree {
             //System.out.println("<null>");
             return;
         }
-        
+        System.out.print(node + " ");
+        preOrder(node.left);
+        preOrder(node.right);
     }
 
     public void inOrder() {
@@ -103,7 +105,9 @@ public class BinarySearchTree {
             //System.out.println("<null>");
             return;
         }
-
+        inOrder(node.left);
+        System.out.print(node + " ");
+        inOrder(node.right);
     }
 
     public void postOrder() {
@@ -118,7 +122,9 @@ public class BinarySearchTree {
             //System.out.println("<null>");
             return;
         }
-
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.print(node + " ");
     }
 
 }

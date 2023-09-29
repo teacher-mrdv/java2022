@@ -1,7 +1,8 @@
 public class StorageServer extends Server {
     private int redundancy;
 
-    public StorageServer(String name, int primaryMemory, int secondaryMemory, int clients, int redundancy) {
+    public StorageServer(String name, int primaryMemory, int secondaryMemory,
+                         int clients, int redundancy) {
             super(name, primaryMemory, secondaryMemory, clients);
             this.redundancy = redundancy;
     }
