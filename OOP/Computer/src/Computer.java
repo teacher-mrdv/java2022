@@ -11,6 +11,7 @@ public abstract class Computer {
 
     public Computer(String name, int primaryMemory, int secondaryMemory) {
         this.name = name;
+        this.cpu = "";
         this.primaryMemory = primaryMemory;
         this.secondaryMemory = secondaryMemory;
     }
