@@ -1,6 +1,6 @@
 
 public class ComputerTest {
-	
+
 	public static void main (String[] args) {
 		/*************************************************************************************************
 			PRACTICE:
@@ -17,7 +17,6 @@ public class ComputerTest {
 		 	any other necessary changes as required :)
 		*************************************************************************************************/
 
-		/* uncomment the code below to test your Laptop and Desktop classes... */
 		Laptop thinkpad = new Laptop("T14s", "i5", 8, 512, 48);
 		System.out.println(thinkpad);
 		System.out.println("Upgrading");
@@ -71,4 +70,3 @@ public class ComputerTest {
 				chromeBook.calculateVirtualMemory() + " GB" );
 	}
 }
-
