@@ -3,25 +3,25 @@
 //
 public class Fraction
 {
-    private int num;
-    private int den;
+    private int numerator;
+    private int denominator;
 
-    public Fraction(int num, int den)
+    public Fraction(int numerator, int denominator)
     {
-        this.num = num;
-        this.den = den;
+        this.numerator = numerator;
+        this.denominator = denominator;
         this.cancel();
     }
     // overloaded constructor
     public Fraction()
     {
-        this.num = 0;
-        this.den = 1;
+        this.numerator = 0;
+        this.denominator = 1;
     }
 
     public double toDecimal()
     {
-        return (double)this.num / (double)this.den;
+        return (double)this.numerator / (double)this.denominator;
     }
 
     // calculate the GCD to simplify a fraction
@@ -44,45 +44,47 @@ public class Fraction
 
     public void cancel() // simplify
     {
-        int gcd = gcd(this.num, this. den);
-        this.num = this.num / gcd;
-        this.den = this.den / gcd;
+        int gcd = gcd(this.numerator, this.denominator);
+        this.numerator = this.numerator / gcd;
+        this.denominator = this.denominator / gcd;
     }
 
-    public int getNum()
+    public int getNumerator()
     {
-        return num;
+        return numerator;
     }
 
-    public void setNum(int num)
+    public void setNumerator(int numerator)
     {
-        this.num = num;
+        this.numerator = numerator;
     }
 
-    public int getDen()
+    public int getDenominator()
     {
-        return den;
+        return denominator;
     }
 
-    public void setDen(int den)
+    public void setDenominator(int denominator)
     {
-        this.den = den;
+        this.denominator = denominator;
     }
 
     //  Practice for the test: write the add, equals and compareTo methods
     public Fraction add(Fraction second)
     {
-        int sumNum = this.num * second.den + second.num * this.den;
-        int sumDen = this.den * second.den;
+        int sumNum = this.numerator * second.denominator + second.numerator * this.denominator;
+        int sumDen = this.denominator * second.denominator;
         Fraction sum = new Fraction(sumNum, sumDen);
         return sum;
     }
 
+    // when are two fractions the same?
     public boolean equals(Fraction second)
     {
         return this.toDecimal() == second.toDecimal();
     }
 
+    // how to compare fractions? Remember when we compare Strings?
     public double compareTo(Fraction second)
     {
         return this.toDecimal() - second.toDecimal();
@@ -90,6 +92,7 @@ public class Fraction
 
     public String toString()
     {
-        return num + "/" + den;
+        return numerator + "/" + denominator;
     }
+
 }

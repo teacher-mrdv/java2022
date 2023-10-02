@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class FractionTest
 {
@@ -25,7 +25,7 @@ public class FractionTest
         System.out.println(f.toDecimal());
         Fraction g = new Fraction();
         System.out.println(g);
-        g.setNum(12); g.setDen(36);
+        g.setNumerator(12); g.setDenominator(36);
         System.out.println(g);
         g.cancel();
         System.out.println(g);
