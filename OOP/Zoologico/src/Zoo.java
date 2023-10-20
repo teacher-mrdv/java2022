@@ -36,6 +36,8 @@ public class Zoo
         return animals;
     }
 
+    public int getPopulation() { return this.population; }
+
     public Animal getAnimal(int index) {
         if( index < 0 || index >= MAXCAPACITY || animals[index] == null ) {
             System.out.println("Error");

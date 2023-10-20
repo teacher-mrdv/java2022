@@ -11,5 +11,7 @@ public class ZooTest {
         ofsAnimal = new Rabbit("Arnold", 2005, "Grey");
         ofs.setAnimal(ofsAnimal);
         System.out.println(ofs);
+        // how to print the last animal added to the zoo?
+        System.out.println(ofs.getAnimal(ofs.getPopulation()-1));
     }
 }
