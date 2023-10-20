@@ -13,5 +13,6 @@ public class ZooTest {
         System.out.println(ofs);
         // how to print the last animal added to the zoo?
         System.out.println(ofs.getAnimal(ofs.getPopulation()-1));
+
     }
 }
