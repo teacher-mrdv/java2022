@@ -20,8 +20,17 @@ public class ZooTest {
         // how to print the last animal added to the zoo?
         System.out.println(ofs.getAnimal(ofs.getPopulation()-1));
         // how to get the first and last animal's names?
-        System.out.println(ofs.getAnimal(0));
-        System.out.println(ofs.getAnimal(ofs.getPopulation()-1));
+        System.out.println(ofs.getAnimal(0).getName());
+        System.out.println(ofs.getAnimal(ofs.getPopulation()-1).getName());
         // which animal is the youngest in the zoo?
+        if(!ofs.isEmpty()) {
+            int min = ofs.getAnimal(0).getAge();
+            for(int i = 1; i < ofs.getPopulation(); i++) {
+                if (ofs.getAnimal(i).getAge() < min) {
+                    min = ofs.getAnimal(i).getAge();
+                }
+            }
+            System.out.println(min);
+        }
     }
 }
