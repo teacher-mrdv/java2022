@@ -61,6 +61,18 @@ public class Zoo
         population++;
     }
 
+    // add an animal at a specific, valid index
+    public void setAnimal(Animal animal, int index) {
+        if( index < 0 || index >= MAXCAPACITY || animals[index] != null ) {
+            System.out.println("Error");
+            return;
+        }
+        this.animals[index] = animal;
+    }
+
+    public boolean isEmpty() {
+        return this.population == 0;
+    }
     @Override
     public String toString() {
         String output =
