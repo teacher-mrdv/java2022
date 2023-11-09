@@ -32,7 +32,7 @@ public class LinkedList
         if(this.isEmpty()) {
             this.setStart(s);
         }
-        
+
     }
     public String toString()
     {
@@ -41,7 +41,7 @@ public class LinkedList
         while (temp != null)
         {
             System.out.print(", " + temp.getData().toString());
-            temp = temp.next;
+            temp = temp.getNext();
         }
         return output;
     }
