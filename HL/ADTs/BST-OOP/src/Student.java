@@ -27,9 +27,13 @@ public class Student
 	{	this.id = id;
 	}
 
-	public String toString()
+	public String toString() // polymorphism
 	{	String output = this.getID() + ": " + this.getName();
 		return output;
 	}
-        
+
+	public boolean equals(Student s) // polymorhism
+	{
+		return this.getID() == s.getID();
+	}
 }

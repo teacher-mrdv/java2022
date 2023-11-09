@@ -1,3 +1,6 @@
+/*
+	Binary search tree node
+ */
 public class BNode
 {
 	private BNode left;
