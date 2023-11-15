@@ -22,17 +22,16 @@ public class LinkedList
         return start;
     }
 
-    /* optional
     public void setStart(Node start) {
         this.start = start;
     }
-    */
+
     public void add(Student s) // add a new Student object to the linked list
     {
+        Node append = new Node(s);
         if(this.isEmpty()) {
-            this.setStart(s);
+            this.setStart(append);
         }
-
     }
     public String toString()
     {
