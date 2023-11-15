@@ -1,3 +1,7 @@
+/*
+    Linked list class, fully encapsulated and containing an object as data
+    Requires Node.java
+ */
 public class LinkedList
 {
     private Node start;
@@ -22,6 +26,11 @@ public class LinkedList
         return start;
     }
 
+    public void setStart(Node s) {
+        this.start = s;
+    }
+
+    /* optional
     public void setStart(Node start) {
         this.start = start;
     }
@@ -30,8 +39,16 @@ public class LinkedList
     {
         Node append = new Node(s);
         if(this.isEmpty()) {
-            this.setStart(append);
+            this.setStart(s);
+            return;
         }
+        Node temp = start; // or this.getStart()
+        while(temp.getNext() != null)       // or, while(temp.hasNext())
+        {
+            temp.setNext(temp.getNext());   // non-encapsulated version: temp=temp.next;
+        }
+        temp.setNext(new Node(s));
+
     }
     public String toString()
     {
