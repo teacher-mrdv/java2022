@@ -7,6 +7,7 @@ public class LinkedList
     private Node start;
     //private Node end; // optional
 
+    public LinkedList() { }
     public LinkedList(Student s)
     {
         start = new Node(s);
@@ -26,11 +27,6 @@ public class LinkedList
         return start;
     }
 
-    public void setStart(Node s) {
-        this.start = s;
-    }
-
-    /* optional
     public void setStart(Node start) {
         this.start = start;
     }
@@ -39,15 +35,18 @@ public class LinkedList
     {
         Node append = new Node(s);
         if(this.isEmpty()) {
-            this.setStart(s);
+            this.setStart(append);
             return;
         }
         Node temp = start; // or this.getStart()
         while(temp.getNext() != null)       // or, while(temp.hasNext())
         {
-            temp.setNext(temp.getNext());   // non-encapsulated version: temp=temp.next;
+            temp = temp.getNext();   // non-encapsulated version: temp=temp
+            // .next;
         }
         temp.setNext(new Node(s));
+
+        // code a deletion by student ID
 
     }
     public String toString()

@@ -13,10 +13,12 @@ public class BinarySearchRecursive
     // actual method with extra low and high parameters
     private static int binarySearch(int[] a, int x, int low, int high)
     {
+		
         if (low > high)
         {	return -1;
         }
         int mid = (low + high) / 2;
+        System.out.println(low+" "+mid+" "+high);
         if (a[mid] == x)
         {	return mid;
         } else if (a[mid] < x)
