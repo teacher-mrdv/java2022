@@ -21,11 +21,11 @@ public class BinaryTree {
             System.out.println(data + " inserted as the root node.");
             root = new BTNode(data);
         } else {
-            Queue<BTNode> queue = new LinkedList<>();
-            queue.add(root);
+            Queue<BTNode> queue = new LinkedList<>();   // Java...
+            queue.add(root);                    // add = enqueue
 
             while (!queue.isEmpty()) {
-                BTNode tempNode = queue.poll();
+                BTNode tempNode = queue.poll(); // poll = dequeue
 
                 if (tempNode.left == null) {
                     System.out.println(data + " inserted to the left of " + tempNode.data);
