@@ -1,28 +1,47 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
     BTNode root;
 
     public BinaryTree() { }
 
     public BinaryTree(int data) {
+        System.out.println(data + " inserted as the root node.");
         this.root = new BTNode(data);
     }
 
     public BinaryTree(BTNode r) {
+        System.out.println(r.data + " inserted as the root node.");
         this.root = r;
     }
 
-    private void addRecursive(BTNode current, int value) {
-        if(current.left != null) {
-            addRecursive(current.left, value);
-        } else if(current.right != null) {
-            addRecursive(current.right, value);
+    public void add(int data) {
+        if (root == null) {
+            System.out.println(data + " inserted as the root node.");
+            root = new BTNode(data);
         } else {
-            current = new BTNode(value);
-        }
-    }
+            Queue<BTNode> queue = new LinkedList<>();
+            queue.add(root);
 
-    public void add(int value) {
-        addRecursive(this.root, value);
+            while (!queue.isEmpty()) {
+                BTNode tempNode = queue.poll();
+
+                if (tempNode.left == null) {
+                    System.out.println(data + " inserted to the left of " + tempNode.data);
+                    tempNode.left = new BTNode(data);
+                    break;
+                } else
+                    queue.add(tempNode.left);
+
+                if (tempNode.right == null) {
+                    System.out.println(data + " inserted to the right of " + tempNode.data);
+                    tempNode.right = new BTNode(data);
+                    break;
+                } else
+                    queue.add(tempNode.right);
+            }
+        }
     }
 
     public boolean isEmpty() {
