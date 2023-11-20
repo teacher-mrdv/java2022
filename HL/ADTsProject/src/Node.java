@@ -18,5 +18,10 @@ public class Node
 	public boolean hasNext()
 	{	return next != null;
 	}
+
+	public String toString()
+	{
+		return this.data + "";
+	}
 }
 

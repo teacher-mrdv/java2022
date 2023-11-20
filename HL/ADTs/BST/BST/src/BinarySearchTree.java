@@ -52,7 +52,8 @@ public class BinarySearchTree
     }
 
     public void inOrder()
-    {   inOrder(this.root);
+    {	if(!this.isEmpty())
+			inOrder(this.root);
     }
 
     public void inOrder(Node root)
@@ -64,6 +65,41 @@ public class BinarySearchTree
         if(root.getRight() != null)
         {   inOrder(root.getRight());
         }
+    }
+
+	public void preOrder()
+	{	if(!this.isEmpty())
+			preOrder(this.root);
+	}
+
+    public void preOrder(Node root)
+    {
+        System.out.print(root + " ");
+		if(root.getLeft() != null)
+        {   preOrder(root.getLeft());
+        }
+
+        if(root.getRight() != null)
+        {   preOrder(root.getRight());
+        }
+    }
+
+	public void postOrder()
+	{	if(!this.isEmpty())
+			postOrder(this.root);
+	}
+    
+    public void postOrder(Node root)
+    {
+		if(root.getLeft() != null)
+        {   postOrder(root.getLeft());
+        }
+
+        if(root.getRight() != null)
+        {   postOrder(root.getRight());
+        }
+
+        System.out.print(root + " ");
     }
 
 }
