@@ -86,18 +86,18 @@ public class Zoo
     }
         // find the youngest animal in the zoo
     public Animal getYoungest() {
-        if(population > 1) {
-            int minYear = animals[0].getBirthYear();
-            int minIndex = 0;
-            for(int i = 1; i < population; i++) {
-                if(animals[i].getBirthYear() < minYear) {
-                    minYear = animals[i].getBirthYear();
+        int minIndex = 0;
+        if (population > 1) {
+            int minAge = animals[0].getAge();
+            for(int i = 1; i < this.getPopulation(); i++) {
+                int currentAge = animals[i].getAge();
+                if( currentAge < minAge) {
+                    minAge = currentAge;
                     minIndex = i;
                 }
             }
-            return animals[minIndex];
         }
-        return animals[0];
+        return this.getAnimal(minIndex);
     }
 
 /*        return "Zoo name='" + name + '\'' +

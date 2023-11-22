@@ -10,7 +10,7 @@ public class ZooTest {
         ofs.setAnimal(ofsAnimal);
         ofsAnimal = new Rabbit("Arnold", 2005, "Grey");
         ofs.setAnimal(ofsAnimal);
-        ofsAnimal = new Zebra("Arnold", 2020, "Plains");
+        ofsAnimal = new Zebra("Fey", 2020, "Plains");
         ofs.setAnimal(ofsAnimal);
         ofsAnimal = new Rabbit("Kooky", 2013, "White");
         ofs.setAnimal(ofsAnimal);
