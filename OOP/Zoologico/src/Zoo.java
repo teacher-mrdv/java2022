@@ -77,18 +77,34 @@ public class Zoo
     public String toString() {
         String output =
                 "Zoo name: " + this.name + "\nAddress: " + this.address +
-                "\nPopulation: " + this.population + "\nAnimals:\n";
-        for(Animal a : animals) {
-            if(a!=null)
-                output = output + "\t" + a.toString() + "\n";
+                        "\nPopulation: " + this.population + "\nAnimals:\n";
+        for (int i = 0; i < this.population; i++) { //for(Animal a : animals) {
+            if (this.animals[i] != null)
+                output = output + "\t" + this.animals[i].toString() + "\n";
         }
         return output;
+    }
+        // find the youngest animal in the zoo
+    public Animal getYoungest() {
+        if(population > 1) {
+            int minYear = animals[0].getBirthYear();
+            int minIndex = 0;
+            for(int i = 1; i < population; i++) {
+                if(animals[i].getBirthYear() < minYear) {
+                    minYear = animals[i].getBirthYear();
+                    minIndex = i;
+                }
+            }
+            return animals[minIndex];
+        }
+        return animals[0];
+    }
 
 /*        return "Zoo name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", animals=" + Arrays.toString(animals) +   // Depdendency on
                 '}';                                        // Arrays class
  */
-    }
+
 
 }

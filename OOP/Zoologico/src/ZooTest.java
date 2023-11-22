@@ -22,7 +22,11 @@ public class ZooTest {
         // how to get the first and last animal's names?
         System.out.println(ofs.getAnimal(0).getName());
         System.out.println(ofs.getAnimal(ofs.getPopulation()-1).getName());
-        // which animal is the youngest in the zoo?
+        /* which animal is the youngest in the zoo?
+           compare this method to the better way to do it, which is
+           to add a getYoungest() method in the Zoo class
+         */
+
         if(!ofs.isEmpty()) {
             int min = ofs.getAnimal(0).getAge();
             for(int i = 1; i < ofs.getPopulation(); i++) {
@@ -30,7 +34,9 @@ public class ZooTest {
                     min = ofs.getAnimal(i).getAge();
                 }
             }
-            System.out.println(min);
+            System.out.println("Youngest animal's age = " + min);
         }
+        System.out.println();
+        System.out.println("Youngest animal: " + ofs.getYoungest());
     }
 }
