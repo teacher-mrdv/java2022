@@ -11,11 +11,17 @@ public class Node
 	// custom constructor that creates and initialises a node
 	public Node(int d)
 	{
-		this.data = d;
+		data = d;
 	}
 
+	// is the node linked to another node or does it point to null?
 	public boolean hasNext()
-	{	return this.next != null;
+	{	return next != null;
+	}
+
+	public String toString()
+	{
+		return this.data + "";
 	}
 }
 
