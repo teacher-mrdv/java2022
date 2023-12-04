@@ -1,10 +1,18 @@
 /*
- * Element class
+ * Element class v2.0
+ *
  * component element of a collection
  * this is done at pseudocode level, but
  * it's good for testing and practice
- * 
+ *
+ * HL note: This is the same as our Node classes in Grade 11 ADTs
+ *
  * Wrapper classes: Integer, Character, Double, etc.
+ *
+ * You may want to look into Java Generics for a cleaner
+ * and more proper implementation that avoids using the
+ * Object superclass to create an element (Node) that may contain
+ * any type of data (as long as it's an object and not a primitive)
  */
 
 

@@ -14,12 +14,14 @@ public class CollectionDemo
 		System.out.println(list + "\n");
 		list.add("Matthew");
 
+		// let's calculate the size of our collection
 		list.resetNext();
 		int size = 0;
 		while( list.hasNext() )
 		{	System.out.print( list.getNext() + " ");
 			size++;
 		}
+		// now we copy it to an array so that we may sort it
 		System.out.println("\nsize of the collection = " + size);
 		Object[] names = new String[size];
 		list.resetNext();
@@ -34,6 +36,9 @@ public class CollectionDemo
 		// print and sort, though!
 		Arrays.sort(names);
 		System.out.println( Arrays.toString(names) );
+		// how would you create another collection and populate it...
+		// with the sorted names from the array?
+
 	}
 }
 

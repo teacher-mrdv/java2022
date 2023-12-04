@@ -1,5 +1,5 @@
 /*
- * Collection class
+ * Collection class v3.0
  * 
  * Collection of elements - implementation of
  * chapter 4 collections [pseudocode level]
@@ -25,6 +25,13 @@ public class Collection
 	{	return start == null;
 	}
 
+	/* this is to emulate the behaviour of the collection.hasNext()
+		as defined in the textbook:
+		will return TRUE if there are one or more elements
+		in the collection that have not been accessed by
+		the present iteration.
+		So not a real hasNext(), but more like isAccessed()...
+	 */
 	public boolean hasNext()
 	{	return current != null;
 	}
@@ -65,14 +72,15 @@ public class Collection
 		this.resetNext();
 		while( this.current != null )
 		{	String e = this.getNext().toString();
-			output = output + e + "  ";
+			output = output + e + " ";
 		}
+		this.resetNext();
 		return output + "]";
 	}
 	
 	public void print()
 	{	this.resetNext();
-		while( this.current.hasNext() )
+		while( current.hasNext() )
 		{	System.out.println(this.getNext().toString());
 		}
 		this.resetNext();
