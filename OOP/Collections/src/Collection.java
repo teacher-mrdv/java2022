@@ -49,7 +49,7 @@ public class Collection
 			{	current = current.getNext();
 			}
 			current.setNext(newElement);
-			//current = current.getNext();
+			current = current.getNext();
 		}
 	}
 	

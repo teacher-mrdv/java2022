@@ -33,7 +33,7 @@ public class CollectionDemo
 		// through the array and the bubble or selection sort
 		// to sort arrays. Useful to show you that the Arrays class
 		// has static toString and sort methods to help
-		// print and sort, though!
+		// print and sort, though! This is useful for testing-
 		Arrays.sort(names);
 		System.out.println( Arrays.toString(names) );
 		// how would you create another collection and populate it...
