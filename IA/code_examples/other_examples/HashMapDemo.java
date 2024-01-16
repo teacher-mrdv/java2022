@@ -9,7 +9,8 @@ public class HashMapDemo {
         scores.put("Luigi", 9);
         scores.put("Wario", 3);
         System.out.println(scores);
-        //System.out.println( scores. );
+        System.out.println( scores.get("Luigi") );
+        System.out.println( scores.containsValue(2) );
         System.out.println(scores.size());
         
         /* Notes to Eshan:
