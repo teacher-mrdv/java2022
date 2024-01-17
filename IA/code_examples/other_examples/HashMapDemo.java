@@ -15,7 +15,7 @@ public class HashMapDemo {
         
         /* Notes to Eshan:
          * the String, int could be just a LeaderBoardData class
-         * you could add LeaderBoardData objects to an ArrayList
+         * you could add LeaderBoardData objects to an array/ArrayList
          * and sort it
          * There may be no need for the HashMaps!
          */
