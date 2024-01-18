@@ -16,7 +16,7 @@ public class Matches {
                     p.setMatched(true); q.setMatched(true);
                     System.out.println(m);
                     matches.add(m);
-                    //players.remove(p); players.remove(q);
+
                 }
             }
         }
