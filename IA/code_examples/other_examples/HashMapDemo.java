@@ -1,5 +1,4 @@
 import java.util.HashMap;
-
 public class HashMapDemo {
     public static void main(String[] args) {
         //ArrayList<HashMap<String, Integer>> leaderboard = new ArrayList<>();
