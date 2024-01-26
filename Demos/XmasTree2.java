@@ -35,11 +35,13 @@ public class XmasTree2
 
 	static void XmasTree(int size)
 	{
+		// top of the tree
 		for(int i = 1; i <= size; i++)
 		{
 			System.out.println( spaces(size-i) +
 				stars(i) + stars(i-1) );
 		}
+		// trunk of the tree
 		for(int i = 1; i <= size/2; i++)
 		{
 			System.out.println( spaces(size-1) +
