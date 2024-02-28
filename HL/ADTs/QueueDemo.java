@@ -1,7 +1,7 @@
 /*
  *
  * Use this class to test your Queue.java class
- * mrdv 2023
+ * mrdv 2024
  * 
  * https://www.baeldung.com/java-printstream-printf
  * https://www.digitalocean.com/community/tutorials/java-printf-method
@@ -23,17 +23,18 @@ public class QueueDemo
 		{
 			input = IBIO.inputInt("enter an integer (0 ends): ");
 			if( input != 0 )
-			{	//queueSize++;
-				q.enQueue(input);
+			{
+				Node add = new Node(input);
+				q.enQueue(add);
 				q.printQueue();
 			}
 		} while( input != 0 );
-		int queueSize = q.size;
-		// Is there a better way of keeping track and getting the size of the queue?
+		int qSize = q.size;	// WHY?
 		System.out.println("\nCopying the queue into an array:");
-		int[] array = new int[queueSize];
-		for(int i = 0; i < queueSize; i++)
-		{	array[i] = q.deQueue();
+		int[] array = new int[qSize];
+		for(int i = 0; i < qSize; i++)
+		{	int data = q.deQueue().data;
+			array[i] = data;
 			q.printQueue();
 			printArray(array);
 		}
@@ -43,7 +44,7 @@ public class QueueDemo
 	{
 		for(int i = 0; i < a.length; i++)
 		{
-			System.out.println( i + " : " + a[i] );
+			System.out.printf( "%d : %d \n", i, a[i] );
 		}
 	}
 }

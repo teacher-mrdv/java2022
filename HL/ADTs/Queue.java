@@ -4,13 +4,13 @@
  * 	enqueue, dequeue, isEmpty, printQueue
  *
  * Requirements for this challenge:
- *  IBIO.java, Node.java, QueueTest.java
+ *  IBIO.java, Node.java, QueueDemo.java
  */
 
 public class Queue
 {
-    Node head;
-    Node tail;
+    Node head = null;
+    Node tail = null;
     int size = 0;
 
     public boolean isEmpty()
@@ -19,9 +19,8 @@ public class Queue
         // no need to check for the tail
     }
 
-    public void enQueue(int data)
+    public void enQueue(Node newNode)
     {
-        Node newNode = new Node(data);
         if( isEmpty() )
         {
             head = newNode;
@@ -33,18 +32,18 @@ public class Queue
         size++;
     }
 
-    public int deQueue()
+    public Node deQueue()
     {
         if (!isEmpty())
         {
-            int d = head.data;
+			Node deQueued = head;
             head  = head.next;
             size--;
-            return d;
+            return deQueued;
         } else
         {
             System.out.println("Queue is empty.");
-            return 0;
+            return null;
         }
     }
 
@@ -62,16 +61,5 @@ public class Queue
         System.out.println("NULL. Size = " + size);
     }
 
-    public int size()
-    {
-        Node temp = head;
-        int counter = 0;
-        while (temp != null)
-        {
-            counter++;
-            temp = temp.next;
-        }
-        return counter;
-    }
 
 }
