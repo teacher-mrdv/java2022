@@ -19,11 +19,11 @@ public class Stack {
     }
 
     public String pop() {
-
+        return null;
     }
 
     public String toString() {
-
+        return null;
     }
 
 }
