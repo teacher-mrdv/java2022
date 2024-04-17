@@ -49,7 +49,7 @@ public class JavaLinkedListDemo
         Iterator<String> iterator = list.iterator();
         while( iterator.hasNext() )
         {
-            //  = list.getNext()
+            // list = list.getNext()
             iterator.next();
             size++;
         }
