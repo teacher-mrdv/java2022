@@ -26,6 +26,21 @@ public class LLPenult {
 		return penu.data; // .getData();
 	}
 	
+	/*
+	public Visitor getPenultimate(LinkedList guests) {
+		if( guests.getStart() == null || guests.getStart().getNext() == null) {
+			return null;
+		}
+		Node penu = guests.getStart();	// assuming the Node's data is a Visitor object
+		Node temp = penu.getNext();
+		while(temp.getNext() != null) {	// or while( temp.hasNext() ) {
+			penu = penu.getNext();
+			temp = temp.getNext();
+		}
+		return penu.getData();
+	}
+	*/
+	
 	public static void main (String[] args) {
 		System.out.println( "Linked list: penultimate element challenge" );
 		LinkedList l = new LinkedList();
