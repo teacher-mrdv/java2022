@@ -13,7 +13,8 @@ public class LLPenult {
 	}
 	
 	public static int penult(LinkedList list) {
-		if(list.size < 2) { // or .size()
+		if(list.start == null || list.start.next == null) {
+			// there's no penultimate in a LL with no or 1 element only
 			return 0; // or null, depending on the Node data's data type
 		}
 		Node penu = list.start;
@@ -26,11 +27,13 @@ public class LLPenult {
 	}
 	
 	public static void main (String[] args) {
+		System.out.println( "Linked list: penultimate element challenge" );
 		LinkedList l = new LinkedList();
 		int[] a = {1,2,3,4,5,6,7,8,9};
 		for(int i : a) {
 			l.append(i); // or l.add(i)
 		}
+		l.printLinkedList();
 		System.out.println( penu(l) );
 		System.out.println( penult(l) );
 	}

@@ -39,6 +39,11 @@ public class LinkedList
         temp.next = newNode;
         size++;
     }
+    
+    public void add(int data)
+    {
+		append(data);
+	}
 
     public boolean delete(int dataToDelete)
     {
